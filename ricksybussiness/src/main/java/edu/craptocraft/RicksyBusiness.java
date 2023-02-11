@@ -1,6 +1,7 @@
 package edu.craptocraft;
 
 import edu.craptocraft.business.CreditCard;
+import edu.craptocraft.business.CrystalExpender;
 import edu.craptocraft.business.UfosPark;
 
 /**
@@ -140,7 +141,7 @@ public class RicksyBusiness {
         // * uno de ellos, que es de 50 EZIs
         // */
 
-        // CrystalExpender packExpender = new CrystalExpender(3, 50);
+        CrystalExpender packExpender = new CrystalExpender(3, 50);
 
         // // Muestra el total de packs y su precio unidad
         // System.out.println("\nPacks\n" + 
