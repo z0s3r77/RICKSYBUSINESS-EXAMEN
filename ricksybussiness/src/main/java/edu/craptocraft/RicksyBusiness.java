@@ -77,8 +77,8 @@ public class RicksyBusiness {
                             "=================");
         System.out.println(ufosPark.getUfoOf(abradolph.number()));
     
-        // // Mostramos el credito de la tarjeta de Abradolph
-        // System.out.println("Credito de Abradolph: " + abradolph.credit());
+        // Mostramos el credito de la tarjeta de Abradolph
+        System.out.println("Credito de Abradolph: " + abradolph.credit());
 
         // // Abradolph quiere reservar otro ovni.
         // // El sistema detecta que ya tiene uno 

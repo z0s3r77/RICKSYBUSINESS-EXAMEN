@@ -40,12 +40,17 @@ public class UfosPark implements GuestDispatcher{
         Optional<String> ovniLibre = this.flota.entrySet().stream().filter(ovnis -> ovnis.getValue() == null).map(Entry::getKey).findFirst();
         
         if (ovniLibre.isPresent()) {
+
+            if(this.getUfoOf(creditCard.number()) == "No tiene ovni assignado"){
+
+                if(creditCard.pay(500)){
+                    this.flota.put(ovniLibre.get(), creditCard.number());
+                } else {
+                    System.out.println(creditCard.cardOwner() + "\t no tiene creditos suficientes");
+                }
             
-            if(creditCard.pay(500)){
-                this.flota.put(ovniLibre.get(), creditCard.number());
-            } else {
-                System.out.println(creditCard.cardOwner() + "\t no tiene creditos suficientes");
             }
+
 
         } else {
             System.out.println("No hay ovnis libres");

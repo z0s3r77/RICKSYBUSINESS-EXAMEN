@@ -22,7 +22,7 @@ public class CreditCard {
         return this.owner;
     }
 
-    protected double credit(){
+    public double credit(){
         return this.credit;
     }
 

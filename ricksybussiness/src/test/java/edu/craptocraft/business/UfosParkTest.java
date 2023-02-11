@@ -45,6 +45,14 @@ public class UfosParkTest {
     }
 
 
+    @Test public void userWantsAnotherUfoTest(){
 
+        // El usuario pide dos Ufos
+
+        this.ufospark.dispatch(this.abradolph);        
+        this.ufospark.dispatch(this.abradolph);
+        
+        assertEquals(2500.0, abradolph.credit(), 0);
+    }
 
 }
