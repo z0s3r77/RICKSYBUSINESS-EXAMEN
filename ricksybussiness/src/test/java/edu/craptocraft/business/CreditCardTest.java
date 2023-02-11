@@ -13,11 +13,10 @@ public class CreditCardTest {
 
     CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
 
-    // Inicializamos abradolph
     @Test public void ConstructorTest(){
 
         assertNotNull(this.abradolph);
-
+        assertEquals(3000.0, this.abradolph.credit(), 0);
     }
 
     @Test public void toStringTest(){
