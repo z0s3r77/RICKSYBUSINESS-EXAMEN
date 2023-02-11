@@ -26,6 +26,17 @@ public class CreditCard {
         return this.credit;
     }
 
+
+    protected boolean pay(double cantidadApagar){
+
+        if(cantidadApagar > credit()){
+            return false;
+        }else{
+            this.credit -= cantidadApagar;
+            return true;
+        }
+    }
+
     @Override
     public String toString() {
 
