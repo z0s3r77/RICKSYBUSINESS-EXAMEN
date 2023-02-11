@@ -17,6 +17,8 @@ public class CreditCardTest {
 
         assertNotNull(this.abradolph);
         assertEquals(3000.0, this.abradolph.credit(), 0);
+        assertEquals("Abradolph Lincler", this.abradolph.cardOwner());
+        assertEquals("4916119711304546", this.abradolph.number());
     }
 
     @Test public void toStringTest(){

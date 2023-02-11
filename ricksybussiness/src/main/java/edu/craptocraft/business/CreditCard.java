@@ -14,7 +14,7 @@ public class CreditCard {
     }
 
 
-    protected String number(){
+    public String number(){
         return this.number;
     }
 
