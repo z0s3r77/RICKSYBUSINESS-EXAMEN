@@ -51,8 +51,16 @@ public class UfosParkTest {
 
         this.ufospark.dispatch(this.abradolph);        
         this.ufospark.dispatch(this.abradolph);
-        
+
         assertEquals(2500.0, abradolph.credit(), 0);
+    }
+
+
+    @Test public void addingAnotherUfo(){
+
+        this.ufospark.add("trex");
+        assertEquals("[trex, dox, unx]", this.ufospark.toString());
+        
     }
 
 }

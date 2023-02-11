@@ -27,7 +27,7 @@ public class CreditCard {
     }
 
 
-    protected boolean pay(double cantidadApagar){
+    public boolean pay(double cantidadApagar){
 
         if(cantidadApagar > credit()){
             return false;
