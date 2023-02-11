@@ -11,26 +11,34 @@ public class CrystalExpender implements GuestDispatcher {
 
         this.stock = stock;
         this.itemCost = itemCost;
-
-
     }
+
+    
 
     @Override
     public void dispatch(CreditCard creditCard) {
-        // TODO Auto-generated method stub
+
+        if (stock() > 0 && creditCard.pay(itemCost())) {
+            this.stock -= 1;
+        }
         
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
+        StringBuilder crystalExpender = new StringBuilder();
+        crystalExpender.append("stock:\t"+this.stock()+"\ncost:\t"+this.itemCost());
+        return crystalExpender.toString();
+
     }
 
     protected int stock(){
         return this.stock;
     }
 
+    protected double itemCost(){
+        return this.itemCost;
+    }
 
     
 

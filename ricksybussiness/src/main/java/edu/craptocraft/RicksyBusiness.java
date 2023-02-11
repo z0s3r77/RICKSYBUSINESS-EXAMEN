@@ -143,13 +143,13 @@ public class RicksyBusiness {
 
         CrystalExpender packExpender = new CrystalExpender(3, 50);
 
-        // // Muestra el total de packs y su precio unidad
-        // System.out.println("\nPacks\n" + 
-        //                     "=====");
-        // System.out.println(packExpender);
+        // Muestra el total de packs y su precio unidad
+        System.out.println("\nPacks\n" + 
+                            "=====");
+        System.out.println(packExpender);
 
         // // Abradolph compra su pack de bienvenida
-        // packExpender.dispatch(abradolph);
+        packExpender.dispatch(abradolph);
 
         // System.out.println("\nAbradolph compra su pack\n" + 
         //                     "========================");
