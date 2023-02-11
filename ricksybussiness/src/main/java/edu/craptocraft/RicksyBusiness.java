@@ -3,6 +3,7 @@ package edu.craptocraft;
 import edu.craptocraft.business.CreditCard;
 import edu.craptocraft.business.CrystalExpender;
 import edu.craptocraft.business.Receptivo;
+import edu.craptocraft.business.RickMenu;
 import edu.craptocraft.business.UfosPark;
 
 /**
@@ -179,6 +180,13 @@ public class RicksyBusiness {
         receptivo.registra(packExpender);
         receptivo.registra(ufosPark);
 
+
+        // El nuevo RickMenu 
+        RickMenu rickMenu = new RickMenu(100, 10);
+        receptivo.registra(rickMenu);
+
+
+
         // Implementa el metodo receptivo.dispatch()
         // para que invoque a UfosPark.dispatch()
         // y a CrystalExpender.dispatch()
@@ -188,7 +196,7 @@ public class RicksyBusiness {
         System.out.println("\nLLega Squanchy!\n" + 
                             "===============");
         receptivo.dispatch(squanchy);
-        mostrarReserva(squanchy, packExpender, ufosPark);
+        mostrarReserva(squanchy, packExpender, ufosPark,rickMenu);
 
         // Gearhead reserva ovni y pack.
         // No tiene crédito.
@@ -197,7 +205,7 @@ public class RicksyBusiness {
                             "===============");
         gearHead.pay(3000); // no tiene crédito
         receptivo.dispatch(gearHead);
-        mostrarReserva(gearHead, packExpender, ufosPark);
+        mostrarReserva(gearHead, packExpender, ufosPark,rickMenu);
 
         // Birdpearson es recibido en la fiesta
 
@@ -205,7 +213,7 @@ public class RicksyBusiness {
                             "==================");
         CreditCard birdpearson = new CreditCard("Birdpearson", "1111111111111111");
         receptivo.dispatch(birdpearson);
-        mostrarReserva(birdpearson, packExpender, ufosPark);
+        mostrarReserva(birdpearson, packExpender, ufosPark,rickMenu);
 
         // Morty intenta reserver un ovni y un pack pero no quedan
 
@@ -213,7 +221,7 @@ public class RicksyBusiness {
                             "==========================================");
         morty = new CreditCard("Morty", "0000000000000000");
         receptivo.dispatch(morty);
-        mostrarReserva(morty, packExpender, ufosPark);
+        mostrarReserva(morty, packExpender, ufosPark,rickMenu);
         
 
         /**
@@ -230,14 +238,17 @@ public class RicksyBusiness {
         * invitados/as que han hecho un pedido.
         */
 
-        // tu código aquí
-        
+
+
     }
 
-    private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
+    private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos, RickMenu rickMenu) {
         System.out.println(card);
         System.out.println("Packs: " + expender.stock());
         System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
+        System.out.println("Cantidad RickMenus disponibles: " + rickMenu.stock());
+        ;
     }
+
 }
 
