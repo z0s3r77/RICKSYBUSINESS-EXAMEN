@@ -1,10 +1,14 @@
 package edu.craptocraft.business;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RickMenu implements GuestDispatcher {
 
 
     private int stock;
     private double itemCost;
+    private List<String> genteQueHaPagado = new ArrayList<>();
 
     public RickMenu(int stock, double itemCost){
         this.stock = stock;
@@ -25,9 +29,14 @@ public class RickMenu implements GuestDispatcher {
 
         if (stock() > 0 && creditCard.pay(itemCost())) {
             this.stock -= 1;
+            this.genteQueHaPagado.add(creditCard.cardOwner());
         }
         
     }
     
+    @Override
+    public String toString() {
+        return this.genteQueHaPagado.toString();
+    }
     
 }
