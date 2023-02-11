@@ -16,4 +16,10 @@ public class Receptivo {
     public int getDispatchers(){
         return this.dispatchers.size();
     }
+
+    public void dispatch(CreditCard creditCard){
+
+        this.dispatchers.stream().forEach(dispatcher -> dispatcher.dispatch(creditCard));
+
+    }
 }

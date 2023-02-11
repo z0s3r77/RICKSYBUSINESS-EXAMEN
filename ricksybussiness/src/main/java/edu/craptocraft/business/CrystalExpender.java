@@ -32,7 +32,7 @@ public class CrystalExpender implements GuestDispatcher {
 
     }
 
-    protected int stock(){
+    public int stock(){
         return this.stock;
     }
 
