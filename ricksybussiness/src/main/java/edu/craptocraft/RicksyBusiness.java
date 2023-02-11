@@ -151,17 +151,17 @@ public class RicksyBusiness {
         // // Abradolph compra su pack de bienvenida
         packExpender.dispatch(abradolph);
 
-        // System.out.println("\nAbradolph compra su pack\n" + 
-        //                     "========================");
-        // System.out.println("Packs\n" + packExpender);
-        // System.out.println("Credito de Abradolph: " + abradolph.credit());
+        System.out.println("\nAbradolph compra su pack\n" + 
+                            "========================");
+        System.out.println("Packs\n" + packExpender);
+        System.out.println("Credito de Abradolph: " + abradolph.credit());
 
-        // // El pobre GerHead no tiene crédito para comprar su pack
-        // System.out.println("\nGearHead sin credito para su pack\n" + 
-        //                     "=================================");
-        // packExpender.dispatch(gearHead);
-        // System.out.println("Packs\n" + packExpender);
-        // System.out.println("Credito de GearHead: " + gearHead.credit());
+        // El pobre GerHead no tiene crédito para comprar su pack
+        System.out.println("\nGearHead sin credito para su pack\n" + 
+                            "=================================");
+        packExpender.dispatch(gearHead);
+        System.out.println("Packs\n" + packExpender);
+        System.out.println("Credito de GearHead: " + gearHead.credit());
 
 
         // /**
@@ -174,9 +174,9 @@ public class RicksyBusiness {
         // * y CrystalDispatcher al receptivo
         // */
 
-        // Receptivo receptivo = new Receptivo();
-        // receptivo.registra(packExpender);
-        // receptivo.registra(ufosPark);
+        Receptivo receptivo = new Receptivo();
+        receptivo.registra(packExpender);
+        receptivo.registra(ufosPark);
 
         // // Implementa el metodo receptivo.dispatch()
         // // para que invoque a UfosPark.dispatch()
